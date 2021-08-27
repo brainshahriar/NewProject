@@ -18,7 +18,7 @@ class StudentController extends BaseController
 	}
 	public function store()
 	{
-		$student = new StudentModel();
+		$students = new StudentModel();
 		$data=[
           'Name'=>$this->request->getPost('Name'),
 		  'email'=>$this->request->getPost('email'),
@@ -26,8 +26,8 @@ class StudentController extends BaseController
 		  'course'=>$this->request->getPost('course')
 		  
 		];
-		$student->save($data);
-		//return redirect('students')->with('status','Student Inseted Successfully');
+		$students->save($data);
+		return redirect('students')->with('status','Student Inseted Successfully');
 	}
 	public function edit( $Id = null)
     {
@@ -47,5 +47,13 @@ class StudentController extends BaseController
         $student->update($Id,$data);
         return redirect()->to(base_url('students'))->with('status','Student Updated Successfully');
 	}
+	public function delete($Id = null)
+	{
+		$students = new StudentModel();
+		$students->delete($Id);
+		return redirect()->back()->with('status','Student Deleted Successfully');
+	}
+
+
 }
 ?>

@@ -30,7 +30,7 @@
 
           swal({
             title: "Hey !!!",
-            text: "Student Inserted Successfully!",
+            text: "Successfully Done !!!",
             icon: "success",
             button: "Ok Done!",
        });

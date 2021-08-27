@@ -34,8 +34,21 @@
                                     <td><?php echo $row['course']; ?></td>
 
                                     <td>
-                                        <a href="<?= base_url('students/edit/'.$row['Id'])?>" class="btn btn-primary btn-sm">Edit</a>
-                                        <a href="" class="btn btn-primary btn-sm">Delete</a>
+
+                                
+                                    
+
+                                   
+
+                 
+               <form action="<?= base_url('students/delete/'.$row['Id']) ?>" method="POST">  
+               <a href="<?= base_url('students/edit/'.$row['Id'])?>" class="btn btn-primary btn-sm">Edit</a>  
+                  <input type="hidden" name="_method" value="DELETE" />             
+                   <button type="submit" class="btn btn-danger btn-sm">Delete</button>           
+                          </form>
+        
+
+
                                     </td>
                                 </tr>
                                 <?php  endforeach ?>
@@ -52,3 +65,4 @@
 
 
 <?= $this->endSection() ?>
+

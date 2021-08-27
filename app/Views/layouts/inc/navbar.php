@@ -11,7 +11,7 @@
               <a class="nav-link active" aria-current="page" href="<?= base_url('layouts/frontend.php');?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('students');?>">STUDENTS</a>
+              <a class="nav-link active" href="<?= base_url('students');?>">Students</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

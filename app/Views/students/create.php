@@ -25,7 +25,7 @@
     <input type="text" class="form-control" name="course" placeholder="Course" required>
   </div>
  <br>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
 </div>
 

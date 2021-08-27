@@ -40,7 +40,8 @@ $routes->get('/students/create','StudentController::create');
 $routes->post('/students/add','StudentController::store');
 $routes->get('students/edit/(:num)','StudentController::edit/$1');
 $routes->put('students/update/(:num)','StudentController::update/$1');
-
+$routes->delete('students/delete/(:num)','StudentController::delete/$1');
+$routes->get('students/confirm-delet/(:num)','StudentController::confirmdelete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
