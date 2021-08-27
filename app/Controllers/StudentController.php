@@ -27,7 +27,10 @@ class StudentController extends BaseController
 		  
 		];
 		$students->save($data);
-		return redirect('students')->with('status','Student Inseted Successfully');
+		session()->setFlashdata('status_text','Your Student Data has Inserted');
+		return redirect('students')
+		->with('status_icon','success')
+		->with('status','Student Inserted Successfully');
 	}
 	public function edit( $Id = null)
     {
@@ -45,13 +48,19 @@ class StudentController extends BaseController
             'course'=>$this-> request-> getPost('course')
         ];
         $student->update($Id,$data);
-        return redirect()->to(base_url('students'))->with('status','Student Updated Successfully');
+		session()->setFlashdata('status_text','Your Student Data has been Updated');
+        return redirect()->to(base_url('students'))
+		->with('status_icon','success')
+		->with('status','Student Updated Successfully');
 	}
 	public function delete($Id = null)
 	{
 		$students = new StudentModel();
 		$students->delete($Id);
-		return redirect()->back()->with('status','Student Deleted Successfully');
+		session()->setFlashdata('status_text','Your Student Data has been Deleted');
+		return redirect()->back()
+		->with('status_icon','success')
+		->with('status','Student Deleted Successfully');
 	}
 
 

@@ -26,12 +26,12 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
       $(document).ready(function(){
-        <?php if(session()->getFlashdata()){ ?>
+        <?php if(session()->getFlashdata('status')){ ?>
 
           swal({
-            title: "Hey !!!",
-            text: "Successfully Done !!!",
-            icon: "success",
+            title: "<?= session()->getFlashdata('status') ?> ",
+            text: "<?= session()->getFlashdata('status_text') ?>",
+            icon: "<?= session()->getFlashdata('status_icon') ?>",
             button: "Ok Done!",
        });
 
