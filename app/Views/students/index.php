@@ -42,9 +42,9 @@
 
                  
                <form action="<?= base_url('students/delete/'.$row['Id']) ?>" method="POST">  
-               <a href="<?= base_url('students/edit/'.$row['Id'])?>" class="btn btn-primary btn-sm">Edit</a>  
+               <a href="<?= base_url('students/edit/'.$row['Id'])?>" class="btn btn-success btn-sm">Edit</a>  
                   <input type="hidden" name="_method" value="DELETE" />             
-                   <button type="submit" class="btn btn-danger btn-sm">Delete</button>           
+                   <button type="submit" value="<?= $row['Id']; ?>" class="confirm_del_btn btn btn-danger btn-sm">Delete</button>           
                           </form>
         
 
