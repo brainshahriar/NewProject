@@ -12,7 +12,7 @@
                      <a href="<?= base_url('students/create') ?>"  class="btn btn-info btn-sm float-end">Add</a>
                  </div>
                  <div class="card-body">
-                     <table class="table table-bordered">
+                     <table class="table table-bordered" id="mydatatable">
                         <thead>
                             <tr>
                                 <th>ID</th>

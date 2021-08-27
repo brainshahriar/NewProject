@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="<?= base_url('assets\css\bootstrap.min.css'); ?>" rel="stylesheet" >
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/dataTables.bootstrap4.min.css">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -22,8 +24,15 @@
     <script src="<?= base_url('assets\js\bootstrap.bundle.min.js');?>" rel="stylesheet" ></script>
     <script src="<?= base_url('assets\js\popper.min.js');?>" rel="stylesheet"></script>
     <script src="<?= base_url('assets\js\jquery-3.6.0.js');?>" rel="stylesheet"></script>
-
+     <script src="//cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdn.datatables.net/1.11.0/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+  $(document).ready( function () {
+    $('#mydatatable').DataTable();
+} );
+
+    </script>
     <script>
       $(document).ready(function(){
         <?php if(session()->getFlashdata('status')){ ?>
