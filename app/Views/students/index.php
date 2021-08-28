@@ -66,3 +66,5 @@
 
 <?= $this->endSection() ?>
 
+<? $this->section('scripts') ?>
+

@@ -47,8 +47,9 @@ $routes->get('students/confirm-delete/(:num)','StudentController::confirmdelete/
 $routes->get('/employee','EmployeeController::index');
 $routes->get('/employee/create1','EmployeeController::create1');
 $routes->post('/employee/add1','EmployeeController::store1');
-
-
+$routes->get('employee/edit1/(:num)','EmployeeController::edit1/$1');
+$routes->put('employee/update1/(:num)','EmployeeController::update1/$1');
+$routes->delete('employee/delete/(:num)','EmployeeController::delete/$1');
 
 
 /*

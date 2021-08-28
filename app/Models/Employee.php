@@ -2,7 +2,7 @@
 use CodeIgniter\Model;
 class Employee extends Model
 {
-    protected $table = 'emplyees';
+    protected $table = 'emplyess';
     protected $primaryKey='Id';
     protected $allowedFields = [
 

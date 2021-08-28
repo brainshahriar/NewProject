@@ -14,7 +14,7 @@
                     <a href="<?= base_url('employee/create1') ?>"  class="btn btn-info btn-sm float-end">Add</a>
                   <br>
                   <br>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="mydatatable">
                             <thead>
                                 <tr>
                                     <th>Id</th>
@@ -38,9 +38,11 @@
                                     <td><?=$row['designation']?></td>
                                     <td><?=$row['created_at']?></td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-sm">Edit</a>
-                                        <a href="" class="btn btn-danger btn-sm">Delete</a>
-
+                                    <form action="<?= base_url('employee/delete/'.$row['Id']) ?>" method="POST">  
+                                        <a href="<?= base_url('employee/edit1/'.$row['Id'])?>" class="btn btn-success btn-sm">Edit</a>
+                                        <input type="hidden" name="_method" value="DELETE" /> 
+                                        <button type="submit" value="<?= $row['Id']; ?>" class="confirm_del_btn btn btn-danger btn-sm">Delete</button>           
+                                </form>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
